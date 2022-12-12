@@ -10,19 +10,6 @@ function getListProduct() {
   promise
     .then(function (result) {
       renderHTML(result.data);
-
-      let cart = document.querySelector("#cart");
-      let cartIcon = document.querySelector(".cart-icon");
-      let closeCart = document.querySelector(".cart-close");
-
-      cartIcon.onclick = () => {
-        cart.classList.add("show");
-      };
-
-      closeCart.onclick = () => {
-        cart.classList.remove("show");
-      };
-
       var addCart = document.getElementsByClassName("price-icon");
       for (var i = 0; i < addCart.length; i++) {
         var button = addCart[i];
@@ -68,7 +55,7 @@ function getListProduct() {
         for (var i = 0; i < cartProductName.length; i++) {
           console.log(cartProductName);
           if (cartProductName[i].innerText === titlecart) {
-            alert("This product is already add");
+            alert("This product is already add to cart");
             return;
           }
         }
@@ -168,3 +155,17 @@ function renderHTML(data) {
   });
   getEle("productItems").innerHTML = content;
 }
+
+let cart = document.querySelector("#cart");
+
+let cartIcon = document.querySelector(".cart-icon");
+
+let closeCart = document.querySelector(".cart-close");
+
+cartIcon.onclick = () => {
+  cart.classList.add("show");
+};
+
+closeCart.onclick = () => {
+  cart.classList.remove("show");
+};
