@@ -9,6 +9,12 @@
   text-decoration: none;
 }
 
+.custom-select:focus {
+  border-color: #f57f17;
+  outline: 0;
+  box-shadow: none;
+}
+
 header {
   position: fixed;
   top: 0;

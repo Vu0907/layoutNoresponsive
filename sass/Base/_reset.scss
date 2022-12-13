@@ -8,3 +8,11 @@
     text-decoration: none;
   }
 }
+
+.custom-select {
+  &:focus {
+    border-color: $color-primary;
+    outline: 0;
+    box-shadow: none;
+  }
+}

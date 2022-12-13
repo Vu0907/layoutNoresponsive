@@ -49,17 +49,13 @@
           <div id="cart">
             <h5 class="cart-title text-center">Your cart</h5>
             <!-- show product -->
-            <div class="cart-content">
-             
-
-              
-            </div>
+            <div class="cart-content"></div>
             <div class="product-total d-flex justify-content-end">
-                <p class="total-title">Total</p>
-                <p class="total-price ml-2">$0</p>
-              </div>
-              <button class="button-buy d-flex">Check Out</button>
-              <i class="fa-solid fa-xmark cart-close"></i>
+              <p class="total-title">Total</p>
+              <p class="total-price ml-2">$0</p>
+            </div>
+            <button class="button-buy d-flex">Check Out</button>
+            <i class="fa-solid fa-xmark cart-close"></i>
           </div>
         </div>
       </div>
@@ -70,23 +66,12 @@
       <div class="container">
         <h2 class="title">PRODUCTS</h2>
         <div class="product-checkbox">
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                value="samsung"
-              />Samsung
-            </label>
-          </div>
-          <div class="form-check-inline">
-            <label class="form-check-label">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                value="iphone"
-              />Iphone
-            </label>
+          <div class="col-sm-2 pl-0 mb-4">
+            <select class="custom-select" id="productFilter">
+              <option value="all">Tất cả</option>
+              <option value="Samsung">Samsung</option>
+              <option value="Iphone">Iphone</option>
+            </select>
           </div>
         </div>
         <div class="product-content">

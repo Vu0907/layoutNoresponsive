@@ -169,3 +169,21 @@ cartIcon.onclick = () => {
 closeCart.onclick = () => {
   cart.classList.remove("show");
 };
+
+getEle("productFilter").addEventListener("change", () => {
+  const option = getEle("productFilter").value;
+  productService
+    .getListProductApi()
+    .then((result) => {
+      const data = result.data;
+      let list = data;
+      if (option !== "all") {
+        list = data.filter((product) => product.type === option);
+      }
+
+      renderHTML(list);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
